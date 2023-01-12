@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying............'
-                sh 'scp -r webapp/dist ubuntu@172.31.11.255:/var/www/html/'
+                sh 'sudo scp -r webapp/dist ubuntu@172.31.11.255:/var/www/html/'
             }
         }
     }
